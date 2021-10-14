@@ -1,0 +1,31 @@
+@BaseUrl = http://localhost:3000/
+@json= Content-Type: application/json
+@resource = posts
+
+###获取资源列表
+GET {{BaseUrl}}{{resource}}
+
+
+###获取资源详情
+GET {{BaseUrl}}{{resource}}/12
+
+###创建资源
+POST {{BaseUrl}}{{resource}}
+{{json}}
+
+{
+    "title": "sample",
+    "context":"frist post",
+}
+
+###更新资源
+PUT {{BaseUrl}}{{resource}}/12
+{{json}}
+
+{
+    "title": "blank",
+    "context":"frist post",
+}
+
+###删除资源
+DELETE {{BaseUrl}}{{resource}}/616400f11f6299763fd11fbc
